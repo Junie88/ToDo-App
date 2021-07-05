@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-icon name="caret-back-sharp" slot="start" (click)="gotoMain()"></ion-icon>
+
+    <ion-title>Add New List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked" >Title</ion-label>
+      <ion-input type="text"[(ngModel)]="task_title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" >Description</ion-label>
+      <ion-input type="text" [(ngModel)]="task_description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Deadline</ion-label>
+      <ion-datetime min="2019" display-format="MM/DD/YYYY" [(ngModel)]="task_last_date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" shape="round" color="secondary" (click)="addtask()"> Add Task</ion-button>
+
+</ion-content>
